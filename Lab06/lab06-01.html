@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.8" />
+    <title>JavaScript DOM</title>
+
+    <!-- Change Text -->
+    <script>
+        function changeText() {
+            var headingElement = document.getElementById("heading");
+            headingElement.innerHTML = "Hello JavaScript";
+        }
+    </script>
+
+    <!-- Change URL -->
+    <script>
+        function changeURL() {
+            var urlElement = document.getElementById("url");
+            console.log(urlElement.value);
+            window.location = urlElement.value;
+        }
+    </script>
+
+    <!-- Change Image -->
+    <script>
+        function changeImage() {
+            var imageElement = document.getElementById("image");
+            imageElement.src = "https://cdn-icons-png.flaticon.com/128/10162/10162741.png?ga=GA1.1.73037333.1784207092";
+        }
+    </script>
+
+    <!-- Change CSS -->
+    <script>
+        function changeCSS() {
+            var headingElement = document.getElementById("heading2");
+            headingElement.style.color = "red";
+            headingElement.style.backgroundColor = "black";
+            headingElement.style.fontSize = "50px";
+        }
+    </script>
+
+    <!-- Change Class -->
+    <style>
+        .heading3 {
+            color: rgb(47, 0, 255);
+            background-color: rgb(196, 199, 23);
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Change Class -->
+    <script>
+        function changeClass() {
+            var headingElement = document.getElementById("heading3");
+            headingElement.className = "heading3";
+        }
+    </script>
+
+    <!-- Change innerHTML -->
+    <script>
+        function changeInnerHTML() {
+            var headingElement = document.getElementById("heading4");
+            if (headingElement.innerHTML === "Hello World") {
+                headingElement.innerHTML = "Hello JavaScript";
+            } else {
+                headingElement.innerHTML = "Hello World";
+            }
+        }
+    </script>
+
+    <h1 id="heading">Hello World</h1>
+    <button onclick="changeText()">Click Me</button>
+
+    <hr />
+
+    <input type="text" name="url" id="url" placeholder="Enter URL" />
+    <button onclick="changeURL()">Click Me</button>
+
+    <hr />
+
+    <img id="image" src="https://cdn-jcons-png.flaticon.com/128/2618/2618576.png?ga=641.1.73037333.1784207892" alt="Image" />
+    <button onclick="changeImage()">Click Me</button>
+
+    <hr />
+
+    <h1 id="heading2">Hello World</h1>
+    <button id="btn4" onclick="changeCSS()">Click Me</button>
+
+    <hr />
+
+    <h1 id="heading3">Hello World</h1>
+    <button id="btn5" onclick="changeClass()">Click Me</button>
+
+    <hr />
+
+    <h1 id="heading4">Hello World</h1>
+    <button id="btn6" onclick="changeInnerHTML()">Click Me</button>
+
+</body>
+</html>
